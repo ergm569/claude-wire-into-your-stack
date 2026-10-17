@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": ["mcp__fetch__fetch"]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash|PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/lint-after-tests.js"
+          }
+        ]
+      }
+    ]
+  }
+}
